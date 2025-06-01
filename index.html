@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TAU Transportation System</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      padding-top: 4rem;
+    }
+    .trike-img {
+      max-height: 200px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">TAU Transport</a>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <div class="text-center mb-4">
+      <h2>Welcome to TAU Campus Trike Service</h2>
+      <p>Fast, Reliable, and Safe Transport within Campus</p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tricycle_TukTuk.jpg/640px-Tricycle_TukTuk.jpg" class="img-fluid trike-img rounded" alt="Campus Tricycle">
+      </div>
+      <div class="col-md-6">
+        <h4>Driver Contact</h4>
+        <ul class="list-group">
+          <li class="list-group-item">Name: Mr. Ade</li>
+          <li class="list-group-item">Phone: <a href="tel:+2348012345678">+234 801 234 5678</a></li>
+          <li class="list-group-item">Vehicle: Tricycle #TAU-021</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr>
+
+    <h4 class="mt-4">Request a Ride</h4>
+    <form>
+      <div class="mb-3">
+        <label for="pickup" class="form-label">Pickup Location</label>
+        <input type="text" class="form-control" id="pickup" placeholder="E.g. East Campus Gate">
+      </div>
+      <div class="mb-3">
+        <label for="destination" class="form-label">Destination</label>
+        <input type="text" class="form-control" id="destination" placeholder="E.g. Admin Block">
+      </div>
+      <button type="submit" class="btn btn-primary">Book Now</button>
+    </form>
+
+    <hr>
+
+    <h4>FAQs</h4>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            How much does a ride cost?
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Most rides within the campus cost ₦100–₦200.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            How do I contact a driver?
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            You can call the listed number or use our form to book a ride.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <h4 class="mb-3">Service Info</h4>
+    <ul class="list-group">
+      <li class="list-group-item">Available from 7 AM to 9 PM daily</li>
+      <li class="list-group-item">Trained campus-certified drivers</li>
+    </ul>
+
+    <hr>
+
+    <h4>Service Options</h4>
+    <ul class="nav nav-tabs" id="serviceTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="individual-tab" data-bs-toggle="tab" data-bs-target="#individual" type="button">Individual Ride</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="group-tab" data-bs-toggle="tab" data-bs-target="#group" type="button">Group Booking</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="serviceTabsContent">
+      <div class="tab-pane fade show active p-3" id="individual">
+        Best for quick trips across campus. Just you and the driver.
+      </div>
+      <div class="tab-pane fade p-3" id="group">
+        Share a trike with your friends or classmates for a group discount.
+      </div>
+    </div>
+
+    <!-- Modal Trigger -->
+    <button type="button" class="btn btn-info mt-4" data-bs-toggle="modal" data-bs-target="#helpModal" data-bs-toggle="tooltip" title="Need Help?">
+      Help & Support
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="helpModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="helpModalLabel">Help & Support</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            For urgent assistance, call the Transport Unit at +234 8163369171
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+  </script>
+</body>
+</html>
